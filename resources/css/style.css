@@ -1,0 +1,230 @@
+.title {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  text-align: center;
+}
+img{
+  position: absolute;
+  top: 0; 
+  display: inline-block;
+}
+
+#wrap{
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 100%;
+      flex: 1 1 100%;
+margin-top: 1rem;
+margin-left: auto;
+margin-right: auto;
+/* justify-content: center; */
+text-align: center;
+
+}
+
+#wrap, #pointA, #pointB, #pointC, #pointD, #pointE, #pointF, #pointG {
+  /* float: left; */
+  font-size: 50px !important;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  /* margin: 80px 80px; */
+}
+
+#btnA, #btnB, #btnC, #btnD, #btnE, #btnF, #btnG {
+  /* float: left; */
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: #56b3a3;
+}
+a {
+  text-decoration: none;
+}
+a::-moz-focus-inner {
+  border: 0;
+}
+
+.buttons {
+  /* bottom: 50px;
+  position: absolute; */
+}
+
+.button {
+  position: relative;
+  width: 11rem;
+  height: 11rem;
+  margin: 1rem;
+  border-radius: 50%;
+  /* position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 16px;
+  border-radius: 50%;  */
+}
+.button > span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.bg {
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.cancel {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  margin-top: 1rem;
+  text-align: center;
+}
+.cancel a {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  /* line-height: 1.4; */
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+  margin-top: 100px;
+}
+.cancel a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.cancel a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.symbol::before, .symbol::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  margin: auto;
+  border-radius: 2px;
+  content: "";
+}
+.symbol::before{
+  width: 4rem;
+  height: 0.6rem;
+  background-color: #515676;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+.plus .symbol::after {
+  width: 0.6rem;
+  height: 4rem;
+  background-color: #515676;
+}
+.bg::before, .bg::after {
+  position: absolute;
+  top: -3rem;
+  left: -3rem;
+  display: block;
+  width: 17rem;
+  height: 17rem;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  -webkit-transform: scale(0.4);
+          transform: scale(0.4);
+  opacity: 0;
+}
+.button:hover .bg {
+  background-color: rgba(255, 255, 255, 0.3)
+}
+.bg:target {
+  -webkit-animation: push 1s ease-out;
+          animation: push 1s ease-out;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+#btnA:target {
+  background-color: #515676;
+}
+#btnB:target {
+  background-color: #515676;
+}
+#btnC:target {
+  background-color: #515676;
+}
+#btnD:target {
+  background-color: #515676;
+}
+#btnE:target {
+  background-color: #515676;
+}
+#btnF:target {
+  background-color: #515676;
+}
+#btnG:target {
+  background-color: #515676;
+}
+#minus:target + .symbol::before {
+  background-color: #def186;
+}
+.bg:target::before, .bg:target::after {
+  -webkit-animation: wave 1s ease-in-out;
+          animation: wave 1s ease-in-out;
+}
+.bg:target::before {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.bg:target::after {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes push {
+  15% {-webkit-transform: scale(0.75);transform: scale(0.75); box-shadow: 0 0 1px rgba(0, 0, 0, 0.3)}
+  75% {-webkit-transform: scale(1.1);transform: scale(1.1); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)}
+  100% {-webkit-transform: scale(1);transform: scale(1)}
+}
+
+@keyframes push {
+  15% {-webkit-transform: scale(0.75);transform: scale(0.75); box-shadow: 0 0 1px rgba(0, 0, 0, 0.3)}
+  75% {-webkit-transform: scale(1.1);transform: scale(1.1); box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1)}
+  100% {-webkit-transform: scale(1);transform: scale(1)}
+}
+
+@-webkit-keyframes wave {
+  10% {opacity: 0.3}
+  100% {-webkit-transform: scale(1);transform: scale(1); opacity: 0}
+}
+
+@keyframes wave {
+  10% {opacity: 0.3}
+  100% {-webkit-transform: scale(1);transform: scale(1); opacity: 0}
+}
